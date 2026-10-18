@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Dovednosti nenásilné komunikace · INK</title>
+<meta name="description" content="Karty dovedností nenásilné komunikace od Institutu nenásilné komunikace. Projděte si dovednosti a označte, kde jste.">
+<meta name="theme-color" content="#E3E1DD">
+<meta property="og:title" content="Dovednosti nenásilné komunikace · INK">
+<meta property="og:description" content="44 dovedností ve čtyřech úrovních. Projděte si je a označte, kde jste.">
+<meta property="og:image" content="https://dovednosti.ink.cz/og.jpg">
+<meta property="og:type" content="website">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="top"><img src="logo-emerald.png" alt="INK – Institut nenásilné komunikace"><button class="link" id="lgBtn">Úrovně</button></div>
+  <h1>Dovednosti nenásilné komunikace</h1>
+</header>
+<nav class="tiles" id="tiles" aria-label="Sekce dovedností"></nav>
+<div class="fbar" id="fbar"></div>
+<main id="list"></main>
+
+<section id="detail" aria-hidden="true">
+  <div class="dh"><button class="pill" id="back">← Zpět</button><span class="lab" id="dpos"></span></div>
+  <div class="sheet" id="sheet"></div>
+  <div class="navb"><button class="pill" id="prev">Předchozí</button><button class="pill" id="next">Další</button></div>
+</section>
+
+<div id="legend" role="dialog" aria-modal="true"><div class="box"><h3>Čtyři úrovně dovednosti</h3>
+ <div class="lg"><span class="dots"><i></i></span><div><b>1 · NEROZVINUTÁ</b><span>Žádná znalost dovednosti; nevědomá nekompetence.</span></div></div>
+ <div class="lg"><span class="dots"><i></i><i></i></span><div><b>2 · UVĚDOMĚLÁ</b><span>Začínám si uvědomovat dovednost; vědomá nekompetence.</span></div></div>
+ <div class="lg"><span class="dots"><i></i><i></i><i></i></span><div><b>3 · OVLÁDNUTÁ</b><span>Jsem schopen*na používat dovednost, ale s úsilím; vědomá kompetence.</span></div></div>
+ <div class="lg"><span class="dots"><i></i><i></i><i></i><i></i></span><div><b>4 · INTEGROVANÁ</b><span>Používám dovednost přirozeně, s lehkostí a plynulostí; nevědomá kompetence.</span></div></div>
+ <p class="note">Úroveň si označujete jen pro sebe. Uloží se ve vašem telefonu a nikam se neodesílá.</p>
+ <button class="pill" id="lgClose">Zavřít</button></div></div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
