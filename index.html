@@ -17,7 +17,7 @@
 </head>
 <body>
 <header>
-  <div class="top"><img src="logo-emerald.png" alt="INK – Institut nenásilné komunikace"><button class="link" id="lgBtn">Úrovně</button></div>
+  <div class="top"><img src="logo-emerald.png" alt="INK – Institut nenásilné komunikace"><span class="hl"><button class="link" id="helpBtn">Jak na to</button><button class="link" id="lgBtn">Úrovně</button></span></div>
 </header>
 <div id="vCards">
   <h1 class="pad">Dovednosti nenásilné komunikace</h1>
@@ -29,7 +29,28 @@
   <h1 class="pad">Moje mapa</h1>
   <div id="map"></div>
 </div>
-<nav class="tabbar" aria-label="Hlavní menu"><button id="tCards" class="on">Karty</button><button id="tMap">Moje mapa</button></nav>
+<div id="vPrio" hidden>
+  <h1 class="pad">Moje priority</h1>
+  <div id="prio"></div>
+</div>
+<nav class="tabbar" aria-label="Hlavní menu"><button id="tCards" class="on">Karty</button><button id="tMap">Moje mapa</button><button id="tPrio">Priority</button></nav>
+<section id="finder" class="ov"><div class="dh"><button class="pill" id="fBack">← Zpět</button><button class="link" id="fTop">Vyberte dovednosti</button></div><div class="ovb" id="fbody"></div></section>
+<span id="fcount" hidden></span>
+<section id="shared" class="ov"><div class="dh"><img src="logo-emerald.png" alt="INK" style="height:26px"><button class="pill" id="sClose">Otevřít moji appku</button></div><div class="ovb" id="sbody"></div></section>
+<div id="shareDlg" class="modal"><div class="box"><h3>Sdílet odkazem</h3><p class="small">Příjemce uvidí náhled, jeho vlastní data se nezmění.</p><button class="pill" id="shP">Jen priority</button><button class="pill" id="shU">Priority i moje úrovně</button><button class="link" id="shX">Zrušit</button></div></div>
+<div id="intro" class="modal"><div class="box"><div id="ibody"></div><div class="row2"><button class="pill ghost" id="iSkip">Přeskočit</button><button class="pill" id="iNext">Další</button></div></div></div>
+<section id="help" class="ov"><div class="dh"><button class="pill" id="helpClose">← Zpět</button></div><div class="ovb help">
+<h2 class="fh">Jak na to</h2>
+<h3>Karty a úrovně</h3><p>V appce je 44 dovedností nenásilné komunikace rozdělených do šesti sekcí. Klepnutím na dlaždici sekce zobrazíte jen její karty, dalším klepnutím zase všechny. Po otevření karty uvidíte čtyři úrovně dovednosti, od nerozvinuté po integrovanou. Klepněte na tu, která vás teď nejlépe vystihuje. Označení můžete kdykoli změnit nebo zrušit.</p>
+<h3>Moje mapa</h3><p>Pavučina ukazuje průměr označených dovedností v každé sekci. Pod ní je přehled všech dovedností. Tlačítkem „Uložit současný stav“ si pojmenujete bod v čase, třeba „Po kurzu Základy“. V menu „Srovnat s“ pak vidíte, jak se vaše mapa od té doby změnila. Změny se navíc zaznamenávají automaticky, takže se můžete srovnat i se stavem před měsícem nebo před půl rokem.</p>
+<h3>Priority</h3><p>V detailu karty přidáte dovednost do priorit, nejvýš tři. Šipkami změníte pořadí. Appka k prioritám doporučí vypsané kurzy INK, které dané dovednosti trénují.</p>
+<h3>Najít kurz</h3><p>V Prioritách klepněte na „Najít kurz podle dovedností“, vyberte dovednosti a uvidíte všechny vypsané kurzy, které je rozvíjejí.</p>
+<h3>Sdílení a tisk</h3><p>Priority můžete poslat odkazem, buď samotné, nebo i s úrovněmi z mapy, třeba lektorovi nebo kolegovi. Tlačítkem „Tisk / PDF“ si je vytisknete nebo uložíte jako PDF.</p>
+<h3>Soukromí a záloha</h3><p>Vše, co označíte, zůstává jen ve vašem zařízení a nikam se neodesílá. Když budete měnit telefon nebo prohlížeč, uložte si v Mojí mapě zálohu a v novém zařízení ji nahrajte.</p>
+<h3>Přidání na plochu</h3><p>Na iPhonu v Safari klepněte na Sdílet → Přidat na plochu. Na Androidu v Chromu otevřete menu ⋮ → Přidat na plochu. Appka pak funguje i bez internetu.</p>
+<button class="pill" id="helpIntro">Zobrazit úvodního průvodce</button>
+</div></section>
+<div id="print" aria-hidden="true"></div>
 <input type="file" id="impFile" accept="application/json,.json" hidden>
 
 <section id="detail" aria-hidden="true">
