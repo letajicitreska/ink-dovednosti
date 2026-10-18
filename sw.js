@@ -1,4 +1,4 @@
-const VERSION = 'dov-1.2.0';
+const VERSION = 'dov-1.2.1';
 const FILES = ['./','index.html','style.css','app.js','data.js','manifest.webmanifest',
   'haffer-400.woff2','haffer-700.woff2',
   'logo-emerald.png','logo-white.png','icon-192.png','icon-512.png',
