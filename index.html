@@ -18,11 +18,19 @@
 <body>
 <header>
   <div class="top"><img src="logo-emerald.png" alt="INK – Institut nenásilné komunikace"><button class="link" id="lgBtn">Úrovně</button></div>
-  <h1>Dovednosti nenásilné komunikace</h1>
 </header>
-<nav class="tiles" id="tiles" aria-label="Sekce dovedností"></nav>
-<div class="fbar" id="fbar"></div>
-<main id="list"></main>
+<div id="vCards">
+  <h1 class="pad">Dovednosti nenásilné komunikace</h1>
+  <nav class="tiles" id="tiles" aria-label="Sekce dovedností"></nav>
+  <div class="fbar" id="fbar"></div>
+  <main id="list"></main>
+</div>
+<div id="vMap" hidden>
+  <h1 class="pad">Moje mapa</h1>
+  <div id="map"></div>
+</div>
+<nav class="tabbar" aria-label="Hlavní menu"><button id="tCards" class="on">Karty</button><button id="tMap">Moje mapa</button></nav>
+<input type="file" id="impFile" accept="application/json,.json" hidden>
 
 <section id="detail" aria-hidden="true">
   <div class="dh"><button class="pill" id="back">← Zpět</button><span class="lab" id="dpos"></span></div>
