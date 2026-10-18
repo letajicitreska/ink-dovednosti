@@ -1,0 +1,259 @@
+# Jednou denně stáhne vypsané kurzy INK (včetně dovedností, které trénují) a epizody
+# Nenásilného podcastu a uloží je do promo.json, ze kterého appka bere tipy na kurzy.
+# Ručně se dá spustit v záložce Actions → „Aktualizace kurzů“ → Run workflow.
+name: Aktualizace kurzů
+
+on:
+  schedule:
+    - cron: "23 4 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [".github/workflows/kurzy.yml", "data.js"]
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Stáhnout kurzy a podcast
+        run: |
+          python3 - <<'PY'
+          # Stáhne vypsané kurzy INK (včetně dovedností, které trénují) a epizody Nenásilného podcastu
+          # a uloží je do promo.json. Spouští ho GitHub Action jednou denně. Jen standardní knihovna Pythonu.
+          # Když se něco nepovede stáhnout, nechá v promo.json předchozí data (nic se nesmaže).
+          import html, json, re, sys, time, urllib.request
+          from datetime import datetime, timezone
+          from email.utils import parsedate_to_datetime
+
+          COURSES_URL = "https://nenasilnakomunikace.org/kurzy/"
+          PODCAST_RSS = "https://anchor.fm/s/103bc7b64/podcast/rss"
+          OUT = "promo.json"
+          UA = {"User-Agent": "Mozilla/5.0 (dovednosti.ink.cz promo bot)"}
+          # Jiné názvy dovedností, které se objevují na stránkách kurzů -> název na kartě
+          ALIASES = {"Pěstování vitality": "Kultivace vitality", "Kultivace energie": "Kultivace vitality",
+                     "Péče o svou energii": "Kultivace vitality", "Pozorování vs Interpretace": "Pozorování vs. Interpretace",
+                     "Pozorování a interpretace": "Pozorování vs. Interpretace", "Navigování konverzací": "Navigování v konverzaci"}
+          MARKERS = re.compile(r"^Dovednosti$|^Rozvíjené dovednosti$|^Trénované dovednosti$|Klíčov\w*\s+dovednost\w*|v\s+těchto\s+dovednostech|Dovednosti(?=\s+[A-ZÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ])|trénovat\s+(?:tyto\s+)?dovednost\w*|rozvíjet\s+(?:tyto\s+)?dovednost\w*")
+          WINDOW = 1600
+
+
+          def fetch(url):
+              req = urllib.request.Request(url, headers=UA)
+              with urllib.request.urlopen(req, timeout=30) as r:
+                  return r.read().decode("utf-8", "replace")
+
+
+          def text(s):
+              s = re.sub(r"<(script|style)[^>]*>.*?</\1>", " ", s, flags=re.S | re.I)
+              s = re.sub(r"<[^>]+>", " ", s)
+              s = html.unescape(s).replace("\xa0", " ")
+              return re.sub(r"\s+", " ", s).strip()
+
+
+          def load_cards():
+              src = open("data.js", encoding="utf-8").read()
+              data = json.loads(src[src.index("{"):src.rindex("}") + 1])
+              return [(c["id"], c["name"]) for c in data["cards"]]
+
+
+          def lines_of(fragment):
+              f = re.sub(r"<(script|style)[^>]*>.*?</\1>", " ", fragment, flags=re.S | re.I)
+              f = re.sub(r"(?i)<br\s*/?>|</(p|li|h\d|div|tr|dt|dd)>|<(li|p|h\d)[^>]*>", "\n", f)
+              f = re.sub(r"<[^>]+>", " ", f)
+              f = html.unescape(f).replace("\xa0", " ")
+              out = []
+              for x in f.split("\n"):
+                  x = re.sub(r"\s+", " ", x).strip(" -–•·*\t")
+                  x = re.sub(r"^\d+\s*[.)]\s*", "", x)
+                  if x:
+                      out.append(x)
+              return out
+
+
+          def skills_in(page, cards):
+              m = re.search(r"<main[^>]*>(.*?)</main>", page, re.S | re.I)
+              body = m.group(1) if m else page
+              lines = lines_of(body)
+              names = list(cards)
+              for k, v in ALIASES.items():
+                  for cid, n in cards:
+                      if n == v:
+                          names.append((cid, k))
+              names.sort(key=lambda x: -len(x[1]))
+              out = []
+              for i, ln in enumerate(lines):
+                  mk = MARKERS.search(ln)
+                  if not mk:
+                      continue
+                  # název přímo ve větě s markerem („…trénovat je Kontrolovaná eskalace:“)
+                  tail = ln[mk.end():]
+                  cand = [tail] + lines[i + 1:i + 16]
+                  hits, misses = 0, 0
+                  for j, c in enumerate(cand):
+                      got = False
+                      for cid, n in names:
+                          ok = re.search(r"(?<!\w)" + re.escape(n) + r"(?!\w)", c) if j == 0 else re.match(re.escape(n) + r"(?!\w)", c)
+                          if ok:
+                              got = True
+                              if cid not in out:
+                                  out.append(cid)
+                              break
+                      if got:
+                          hits += 1
+                          misses = 0
+                      elif j > 0:
+                          misses += 1
+                          # seznam skončil, nebo se dlouho nic nenašlo
+                          # po nalezení: krátký řádek = konec seznamu, dlouhý = popis dovednosti (max 2)
+                          if (hits and (len(c) < 60 or misses >= 3)) or misses >= 4:
+                              break
+              return out[:8]
+
+
+          def parse_courses(page):
+              out = []
+              blocks = re.split(r'<div class="kalendar udalost">', page)[1:]
+              for b in blocks:
+                  def grab(pat):
+                      m = re.search(pat, b, re.S)
+                      return m.group(1) if m else ""
+                  title_html = grab(r"<h2>\s*<a [^>]*>(.*?)</a>\s*</h2>")
+                  info = grab(r'<div class="informace">(.*?)<div class="lektor">')
+                  desc = re.sub(r"<h2>.*?</h2>|<span[^>]*>.*?</span>|<div[^>]*>.*?</div>", " ", info, flags=re.S)
+                  out.append({
+                      "d": text(grab(r'<div class="datum">(.*?)</div>')),
+                      "t": text(grab(r'<div class="cas">(.*?)</div>')),
+                      "title": text(title_html),
+                      "url": grab(r'<h2>\s*<a href="([^"]+)"'),
+                      "level": text(grab(r'<span class="badge pokrocilost">(.*?)</span>')),
+                      "format": text(grab(r'<span class="badge trvani">(.*?)</span>')),
+                      "desc": text(desc),
+                  })
+              return out
+
+
+          def first_sentence(s, limit=150):
+              m = re.match(r"(.+?[.!?])(\s|$)", s)
+              s = m.group(1) if m else s
+              return s if len(s) <= limit else s[:limit - 1].rsplit(" ", 1)[0] + "…"
+
+
+          def normalize_course(c):
+              m = re.search(r"(\d{1,2})\.\s*(\d{1,2})\.\s*(\d{4})", c["d"])
+              if not m or not c["url"] or not c["title"]:
+                  return None
+              day = "%s-%02d-%02d" % (m.group(3), int(m.group(2)), int(m.group(1)))
+              title, sub = c["title"], ""
+              p = re.match(r"^(.*?)\s*\(([^()]*)\)\s*$", title)
+              if p:
+                  title, sub = p.group(1).strip(), p.group(2).strip()
+              return {"id": c["url"].rstrip("/").rsplit("/", 1)[-1], "title": title, "sub": sub, "date": day,
+                      "time": c["t"], "level": c["level"], "format": c["format"],
+                      "desc": first_sentence(c["desc"]), "url": c["url"], "skills": []}
+
+
+          def parse_podcast(xml, keep=3):
+              out = []
+              for it in re.findall(r"<item>(.*?)</item>", xml, re.S)[:keep]:
+                  def grab(tag):
+                      m = re.search(r"<%s[^>]*>(.*?)</%s>" % (tag, tag), it, re.S)
+                      v = m.group(1) if m else ""
+                      v = re.sub(r"^<!\[CDATA\[(.*)\]\]>$", r"\1", v.strip(), flags=re.S)
+                      return html.unescape(v).strip()
+                  title, link, dur = grab("title"), grab("link"), grab("itunes:duration")
+                  try:
+                      date = parsedate_to_datetime(grab("pubDate")).astimezone(timezone.utc).strftime("%Y-%m-%d")
+                  except Exception:
+                      continue
+                  num, name = "", title
+                  m = re.match(r"^(\d+)\s*[:.–-]\s*(.+)$", title)
+                  if m:
+                      num, name = m.group(1), m.group(2)
+                  mins = ""
+                  parts = [int(x) for x in dur.split(":") if x.isdigit()]
+                  if parts:
+                      secs = parts[-1] + (parts[-2] * 60 if len(parts) > 1 else 0) + (parts[-3] * 3600 if len(parts) > 2 else 0)
+                      mins = str(round(secs / 60)) if len(parts) > 1 else str(round(int(dur) / 60))
+                  out.append({"id": "ep-" + (num or date), "num": num, "title": name, "date": date, "minutes": mins, "url": link})
+              return out
+
+
+          def main():
+              try:
+                  old = json.load(open(OUT, encoding="utf-8"))
+              except Exception:
+                  old = {"courses": [], "podcast": []}
+              data = {"courses": old.get("courses", []), "podcast": old.get("podcast", [])}
+              oldskills = {c.get("id"): c.get("skills", []) for c in data["courses"]}
+              today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+              cards = load_cards()
+
+              try:
+                  raw = []
+                  for n in range(1, 6):
+                      url = COURSES_URL if n == 1 else "%spage/%d/" % (COURSES_URL, n)
+                      try:
+                          page = fetch(url)
+                      except Exception:
+                          break
+                      items = parse_courses(page)
+                      if not items:
+                          break
+                      raw += items
+                  seen, courses = set(), []
+                  for c in raw:
+                      x = normalize_course(c)
+                      if x and x["date"] >= today and x["id"] not in seen:
+                          seen.add(x["id"]); courses.append(x)
+                  courses.sort(key=lambda c: (c["date"], c["time"]))
+                  cache = {}
+                  for c in courses:
+                      key = re.sub(r"-\d+$", "", c["id"])
+                      try:
+                          c["skills"] = skills_in(fetch(c["url"]), cards)
+                          time.sleep(0.3)
+                      except Exception as e:
+                          c["skills"] = oldskills.get(c["id"]) or cache.get(key, [])
+                          print("dovednosti se nepodařilo zjistit:", c["url"], e, file=sys.stderr)
+                      if c["skills"]:
+                          cache[key] = c["skills"]
+                      print(" -", c["date"], c["title"], "->", [n for i, n in cards if i in c["skills"]])
+                  if courses:
+                      data["courses"] = courses
+                  print("kurzy:", len(courses), "· s dovednostmi:", sum(1 for c in courses if c["skills"]))
+              except Exception as e:
+                  print("kurzy se nepodařilo stáhnout:", e, file=sys.stderr)
+
+              try:
+                  eps = parse_podcast(fetch(PODCAST_RSS))
+                  if eps:
+                      data["podcast"] = eps
+                  print("epizody:", len(eps))
+              except Exception as e:
+                  print("podcast se nepodařilo stáhnout:", e, file=sys.stderr)
+
+              with open(OUT, "w", encoding="utf-8") as f:
+                  json.dump(data, f, ensure_ascii=False, indent=1)
+                  f.write("\n")
+
+
+          if __name__ == "__main__":
+              main()
+
+          PY
+
+      - name: Uložit změny
+        run: |
+          if git diff --quiet -- promo.json && git ls-files --error-unmatch promo.json >/dev/null 2>&1; then
+            echo "Beze změn."; exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add promo.json
+          git commit -m "Aktualizace kurzů a podcastu"
+          git push
