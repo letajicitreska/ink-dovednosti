@@ -176,3 +176,9 @@ main{padding-bottom:110px}
   #print .pi{display:flex;justify-content:space-between;gap:8px;font-size:9.5pt;border-bottom:.5pt solid #ccc;padding:1px 0}
   #print .pfoot{margin-top:12px;font-size:8.5pt}
 }
+
+.help ul{margin:4px 0 6px;padding-left:20px;font-size:15.5px;line-height:1.5}
+.help a{color:var(--em);text-underline-offset:3px}
+.credits{font-size:12px!important;line-height:1.45!important;margin-top:28px!important;opacity:.75}
+.printnote{font-size:14px;text-align:center;margin:20px 0 0;grid-column:1/-1}
+.printnote a{color:var(--em);text-underline-offset:3px}

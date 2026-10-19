@@ -2,6 +2,7 @@
 'use strict';
 var NAMES=['NEROZVINUTÁ','UVĚDOMĚLÁ','OVLÁDNUTÁ','INTEGROVANÁ'];
 var KEY='dov_v1',MAXP=3,DAY=86400000;
+var SPOTIFY='https://open.spotify.com/show/6c95sv7fHovUieEGBRQjex';
 var UTM='utm_source=dovednosti.ink.cz&utm_medium=app&utm_campaign=';
 var S={};DATA.sections.forEach(function(s){S[s.id]=s});
 var CARD={};DATA.cards.forEach(function(c){CARD[c.id]=c});
@@ -44,8 +45,9 @@ function renderList(){
     if(filter==='all'&&c.section!==last){h+='<div class="secttl">'+s.name+'</div>';last=c.section}
     h+='<button class="card" data-id="'+c.id+'"><div class="t"><span class="lab">'+s.name+'</span><img src="'+s.icon+'" alt=""><h2>'+c.name+'</h2></div><div class="b" style="background:'+s.color+'"><p>'+c.definition+'</p><img src="logo-white.png" alt="INK"></div>'+badge(c)+'</button>';
   });
+  h+='<p class="printnote">Kartičky dovedností máme i v tištěné podobě. <a href="mailto:info@ink.cz?subject=Objedn%C3%A1vka%20ti%C5%A1t%C4%9Bn%C3%BDch%20karti%C4%8Dek%20dovednost%C3%AD">Napište nám</a>, pokud o ně máte zájem.</p>';
   $('list').innerHTML=h;
-  each('.card',$('list'),function(b){b.onclick=function(){openCard(+b.dataset.id,true,visible)}});
+  each('.card',$('list'),function(b){b.onclick=function(){openCard(+b.dataset.id,true,DATA.cards)}});
 }
 
 /* ---------- Detail karty ---------- */
@@ -222,7 +224,7 @@ function renderPrio(){
   }
   if(PROMO&&PROMO.podcast&&PROMO.podcast.length){
     var ep=PROMO.podcast[0];
-    if((Date.now()-new Date(ep.date))/DAY<=45)h+='<a class="course pod" href="'+esc(utm(ep.url,'podcast'))+'" target="_blank" rel="noopener"><span class="cd">Nenásilný podcast · '+fmtISO(ep.date)+(ep.minutes?' · '+ep.minutes+' min':'')+'</span><b>'+(ep.num?ep.num+': ':'')+esc(ep.title)+'</b><span class="go">Poslechnout →</span></a>';
+    if((Date.now()-new Date(ep.date))/DAY<=45)h+='<a class="course pod" href="'+esc(SPOTIFY)+'" target="_blank" rel="noopener"><span class="cd">Nenásilný podcast · '+fmtISO(ep.date)+(ep.minutes?' · '+ep.minutes+' min':'')+'</span><b>'+(ep.num?ep.num+': ':'')+esc(ep.title)+'</b><span class="go">Poslechnout →</span></a>';
   }
   $('prio').innerHTML=h;
   if($('goCards2'))$('goCards2').onclick=function(){setView('cards',true)};
