@@ -1,20 +1,6 @@
 {
  "courses": [
   {
-   "id": "eskalace-konfliktu-brno-4",
-   "title": "Eskalace konfliktu (den a půl v Brně) – KAPACITA NAPLNĚNA",
-   "sub": "",
-   "date": "2026-10-24",
-   "time": "10:00",
-   "level": "Zkušený",
-   "format": "Víkend",
-   "desc": "Naučte se konflikty otevírat, vstupovat do nich a bezpečně je eskalovat.",
-   "url": "https://nenasilnakomunikace.org/kurz/eskalace-konfliktu-brno-4/",
-   "skills": [
-    28
-   ]
-  },
-  {
    "id": "uvod-do-nenasilne-komunikace-vikend-v-brne-33",
    "title": "Úvod do nenásilné komunikace",
    "sub": "víkend v Brně",
