@@ -729,6 +729,14 @@
  ],
  "podcast": [
   {
+   "id": "ep-108",
+   "num": "108",
+   "title": "Saša Dobrovolná: Respekt ve škole není luxus, ale laťka, kterou má přeskočit každá škola",
+   "date": "2026-10-29",
+   "minutes": "62",
+   "url": "https://podcasters.spotify.com/pod/show/petr-holk0/episodes/108-Saa-Dobrovoln-Respekt-ve-kole-nen-luxus--ale-laka--kterou-m-peskoit-kad-kola-e3r6632"
+  },
+  {
    "id": "ep-107",
    "num": "107",
    "title": "Ian Peatey: Anger That Serves Life",
@@ -743,14 +751,6 @@
    "date": "2026-10-01",
    "minutes": "64",
    "url": "https://podcasters.spotify.com/pod/show/petr-holk0/episodes/106-4D-of-Disconnection-co-spolehliv-brn-spojen-e3pn4so"
-  },
-  {
-   "id": "ep-105",
-   "num": "105",
-   "title": "Kdo, kde, co, kdy a čím? Jak najít strategie, které fakt budou naplňovat potřeby.",
-   "date": "2026-09-10",
-   "minutes": "57",
-   "url": "https://podcasters.spotify.com/pod/show/petr-holk0/episodes/105-Kdo--kde--co--kdy-a-m--Jak-najt-strategie--kter-fakt-budou-naplovat-poteby-e3olhnl"
   }
  ]
 }
