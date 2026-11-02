@@ -51,6 +51,21 @@
    ]
   },
   {
+   "id": "kdyz-naslouchani-nestaci-uvod-do-krizove-intervence-den-v-brne-4",
+   "title": "Když naslouchání nestačí – úvod do krizové intervence",
+   "sub": "den v Brně",
+   "date": "2026-11-21",
+   "time": "09:00",
+   "level": "Pokročilý",
+   "format": "Jednodenní",
+   "desc": "Na kurzu, který propojuje principy nenásilné komunikace s praktickými technikami krizové intervence si osvojíte její základy, práci s intenzivními…",
+   "url": "https://nenasilnakomunikace.org/kurz/kdyz-naslouchani-nestaci-uvod-do-krizove-intervence-den-v-brne-4/",
+   "skills": [
+    10,
+    15
+   ]
+  },
+  {
    "id": "uvod-do-nenasilne-komunikace-vikend-v-praze-24",
    "title": "Úvod do nenásilné komunikace",
    "sub": "víkend v Praze",
@@ -64,21 +79,6 @@
     3,
     6,
     12
-   ]
-  },
-  {
-   "id": "kdyz-naslouchani-nestaci-uvod-do-krizove-intervence-den-v-brne-4",
-   "title": "Když naslouchání nestačí – úvod do krizové intervence",
-   "sub": "den v Brně",
-   "date": "2026-11-21",
-   "time": "09:00",
-   "level": "Pokročilý",
-   "format": "Jednodenní",
-   "desc": "Na kurzu, který propojuje principy nenásilné komunikace s praktickými technikami krizové intervence si osvojíte její základy, práci s intenzivními…",
-   "url": "https://nenasilnakomunikace.org/kurz/kdyz-naslouchani-nestaci-uvod-do-krizove-intervence-den-v-brne-4/",
-   "skills": [
-    10,
-    15
    ]
   },
   {
@@ -176,21 +176,6 @@
    ]
   },
   {
-   "id": "kdyz-naslouchani-nestaci-uvod-do-krizove-intervence-den-v-praze-4",
-   "title": "Když naslouchání nestačí – úvod do krizové intervence",
-   "sub": "den v Praze",
-   "date": "2027-01-28",
-   "time": "09:00",
-   "level": "Pokročilý",
-   "format": "Jednodenní",
-   "desc": "Na kurzu, který propojuje principy nenásilné komunikace s praktickými technikami krizové intervence si osvojíte její základy, práci s intenzivními…",
-   "url": "https://nenasilnakomunikace.org/kurz/kdyz-naslouchani-nestaci-uvod-do-krizove-intervence-den-v-praze-4/",
-   "skills": [
-    10,
-    15
-   ]
-  },
-  {
    "id": "akademie-nenasilne-komunikace",
    "title": "Akademie nenásilné komunikace",
    "sub": "",
@@ -217,6 +202,18 @@
     6,
     12
    ]
+  },
+  {
+   "id": "kdyz-naslouchani-nestaci-uvod-do-krizove-intervence-den-v-praze-4",
+   "title": "Když naslouchání nestačí – úvod do krizové intervence",
+   "sub": "den v Praze",
+   "date": "2027-02-04",
+   "time": "09:00",
+   "level": "Pokročilý",
+   "format": "Jednodenní",
+   "desc": "Na kurzu, který propojuje principy nenásilné komunikace s praktickými technikami krizové intervence si osvojíte její základy, práci s intenzivními…",
+   "url": "https://nenasilnakomunikace.org/kurz/kdyz-naslouchani-nestaci-uvod-do-krizove-intervence-den-v-praze-4/",
+   "skills": []
   },
   {
    "id": "zvladani-reaktivity-od-automatickych-reakci-k-vedomym-odpovedim-vikend-v-brne",
@@ -357,6 +354,18 @@
    ]
   },
   {
+   "id": "vztek-a-nenasilna-komunikace-od-sebeporozumeni-k-bezpecnemu-vyjadreni-den-v-praze",
+   "title": "Vztek a nenásilná komunikace: od sebeporozumění k bezpečnému vyjádření",
+   "sub": "den v Praze",
+   "date": "2027-03-13",
+   "time": "09:00",
+   "level": "Pokročilý",
+   "format": "Jednodenní",
+   "desc": "Co Vám říká vlastní vztek?",
+   "url": "https://nenasilnakomunikace.org/kurz/vztek-a-nenasilna-komunikace-od-sebeporozumeni-k-bezpecnemu-vyjadreni-den-v-praze/",
+   "skills": []
+  },
+  {
    "id": "s-detmi-pochopeni-detskeho-sveta-dlouhodoby-kurz",
    "title": "S dětmi: Pochopení dětského světa (dlouhodobý kurz v Brně (s přítomností miminek))",
    "sub": "",
@@ -443,10 +452,7 @@
    "format": "Jednodenní",
    "desc": "Na kurzu, který propojuje principy nenásilné komunikace s praktickými technikami krizové intervence si osvojíte její základy, práci s intenzivními…",
    "url": "https://nenasilnakomunikace.org/kurz/kdyz-naslouchani-nestaci-uvod-do-krizove-intervence-den-v-brne-3/",
-   "skills": [
-    10,
-    15
-   ]
+   "skills": []
   },
   {
    "id": "rekni-co-chces-sila-jasnych-a-efektivnich-proseb-vecer-v-praze-4",
@@ -464,18 +470,6 @@
    ]
   },
   {
-   "id": "3738",
-   "title": "Introduction to Nonviolent Communication",
-   "sub": "weekend in Prague",
-   "date": "2027-04-17",
-   "time": "09:00",
-   "level": "Začátečník",
-   "format": "Víkend",
-   "desc": "The opportunity to explore the foundations of Nonviolent Communication (NVC), both theoretically and practically – an approach that is becoming…",
-   "url": "https://nenasilnakomunikace.org/kurz/3738/",
-   "skills": []
-  },
-  {
    "id": "uvod-do-nenasilne-komunikace-vikend-v-praze-27",
    "title": "Úvod do nenásilné komunikace",
    "sub": "víkend v Praze",
@@ -490,6 +484,18 @@
     6,
     12
    ]
+  },
+  {
+   "id": "3738",
+   "title": "Introduction to Nonviolent Communication",
+   "sub": "weekend in Prague",
+   "date": "2027-04-17",
+   "time": "09:00",
+   "level": "Začátečník",
+   "format": "Víkend",
+   "desc": "The opportunity to explore the foundations of Nonviolent Communication (NVC), both theoretically and practically – an approach that is becoming…",
+   "url": "https://nenasilnakomunikace.org/kurz/3738/",
+   "skills": []
   },
   {
    "id": "jak-pracovat-s-pretizenim-a-znovu-najit-energii-den-v-praze",
@@ -570,22 +576,6 @@
    ]
   },
   {
-   "id": "od-studu-k-napojeni-den-v-praze",
-   "title": "Od studu k napojení",
-   "sub": "den v Praze",
-   "date": "2027-05-08",
-   "time": "09:00",
-   "level": "Pokročilý",
-   "format": "Jednodenní",
-   "desc": "Stud není oblíbená emoce.",
-   "url": "https://nenasilnakomunikace.org/kurz/od-studu-k-napojeni-den-v-praze/",
-   "skills": [
-    4,
-    19,
-    5
-   ]
-  },
-  {
    "id": "uvod-do-nenasilne-komunikace-vikend-v-olomouci-3",
    "title": "Úvod do nenásilné komunikace",
    "sub": "víkend v Olomouci",
@@ -599,6 +589,22 @@
     3,
     6,
     12
+   ]
+  },
+  {
+   "id": "od-studu-k-napojeni-den-v-praze",
+   "title": "Od studu k napojení",
+   "sub": "den v Praze",
+   "date": "2027-05-08",
+   "time": "09:00",
+   "level": "Pokročilý",
+   "format": "Jednodenní",
+   "desc": "Stud není oblíbená emoce.",
+   "url": "https://nenasilnakomunikace.org/kurz/od-studu-k-napojeni-den-v-praze/",
+   "skills": [
+    4,
+    19,
+    5
    ]
   },
   {
