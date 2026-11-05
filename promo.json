@@ -576,22 +576,6 @@
    ]
   },
   {
-   "id": "od-studu-k-napojeni-den-v-praze",
-   "title": "Od studu k napojení",
-   "sub": "den v Praze",
-   "date": "2027-05-08",
-   "time": "09:00",
-   "level": "Pokročilý",
-   "format": "Jednodenní",
-   "desc": "Stud není oblíbená emoce.",
-   "url": "https://nenasilnakomunikace.org/kurz/od-studu-k-napojeni-den-v-praze/",
-   "skills": [
-    4,
-    19,
-    5
-   ]
-  },
-  {
    "id": "uvod-do-nenasilne-komunikace-vikend-v-olomouci-3",
    "title": "Úvod do nenásilné komunikace",
    "sub": "víkend v Olomouci",
@@ -605,6 +589,22 @@
     3,
     6,
     12
+   ]
+  },
+  {
+   "id": "od-studu-k-napojeni-den-v-praze",
+   "title": "Od studu k napojení",
+   "sub": "den v Praze",
+   "date": "2027-05-08",
+   "time": "09:00",
+   "level": "Pokročilý",
+   "format": "Jednodenní",
+   "desc": "Stud není oblíbená emoce.",
+   "url": "https://nenasilnakomunikace.org/kurz/od-studu-k-napojeni-den-v-praze/",
+   "skills": [
+    4,
+    19,
+    5
    ]
   },
   {
@@ -669,6 +669,25 @@
    ]
   },
   {
+   "id": "nenasilny-leadership-prace-se-skupinovou-dynamikou-vikend-v-brne",
+   "title": "Nenásilný leadership: práce se skupinovou dynamikou",
+   "sub": "víkend v Brně",
+   "date": "2027-05-29",
+   "time": "10:00",
+   "level": "Začátečník",
+   "format": "Víkend",
+   "desc": "Leadership nemusí být vázaný na funkci ani na osobu.",
+   "url": "https://nenasilnakomunikace.org/kurz/nenasilny-leadership-prace-se-skupinovou-dynamikou-vikend-v-brne/",
+   "skills": [
+    26,
+    22,
+    24,
+    40,
+    23,
+    38
+   ]
+  },
+  {
    "id": "uvod-do-nenasilne-komunikace-vikend-v-praze-28",
    "title": "Úvod do nenásilné komunikace",
    "sub": "víkend v Praze",
@@ -689,8 +708,8 @@
    "title": "Usmiřování a péče o rány",
    "sub": "v Brně",
    "date": "2027-06-10",
-   "time": "00:09",
-   "level": "Začátečník",
+   "time": "09:00",
+   "level": "Pokročilý",
    "format": "Jednodenní",
    "desc": "Umění vyslechnout si dopady našeho jednání na druhé bez obran a studu otvírá dveře usmíření.",
    "url": "https://nenasilnakomunikace.org/kurz/usmirovani-a-pece-o-rany-v-brne/",
