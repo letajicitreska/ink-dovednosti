@@ -35,6 +35,21 @@
    ]
   },
   {
+   "id": "kdyz-naslouchani-nestaci-uvod-do-krizove-intervence-den-v-brne-4",
+   "title": "Když naslouchání nestačí – úvod do krizové intervence",
+   "sub": "den v Brně",
+   "date": "2026-11-21",
+   "time": "09:00",
+   "level": "Pokročilý",
+   "format": "Jednodenní",
+   "desc": "Na kurzu, který propojuje principy nenásilné komunikace s praktickými technikami krizové intervence si osvojíte její základy, práci s intenzivními…",
+   "url": "https://nenasilnakomunikace.org/kurz/kdyz-naslouchani-nestaci-uvod-do-krizove-intervence-den-v-brne-4/",
+   "skills": [
+    10,
+    15
+   ]
+  },
+  {
    "id": "uvod-do-nenasilne-komunikace-vikend-v-praze-24",
    "title": "Úvod do nenásilné komunikace",
    "sub": "víkend v Praze",
@@ -48,21 +63,6 @@
     3,
     6,
     12
-   ]
-  },
-  {
-   "id": "kdyz-naslouchani-nestaci-uvod-do-krizove-intervence-den-v-brne-4",
-   "title": "Když naslouchání nestačí – úvod do krizové intervence",
-   "sub": "den v Brně",
-   "date": "2026-11-21",
-   "time": "09:00",
-   "level": "Pokročilý",
-   "format": "Jednodenní",
-   "desc": "Na kurzu, který propojuje principy nenásilné komunikace s praktickými technikami krizové intervence si osvojíte její základy, práci s intenzivními…",
-   "url": "https://nenasilnakomunikace.org/kurz/kdyz-naslouchani-nestaci-uvod-do-krizove-intervence-den-v-brne-4/",
-   "skills": [
-    10,
-    15
    ]
   },
   {
@@ -560,22 +560,6 @@
    ]
   },
   {
-   "id": "uvod-do-nenasilne-komunikace-vikend-v-olomouci-3",
-   "title": "Úvod do nenásilné komunikace",
-   "sub": "víkend v Olomouci",
-   "date": "2027-05-08",
-   "time": "09:00",
-   "level": "Začátečník",
-   "format": "Víkend",
-   "desc": "Dopřejte si intenzivní víkendový vstup do světa nenásilné komunikace a vybudujte si pevné základy, které můžete dále rozvíjet.",
-   "url": "https://nenasilnakomunikace.org/kurz/uvod-do-nenasilne-komunikace-vikend-v-olomouci-3/",
-   "skills": [
-    3,
-    6,
-    12
-   ]
-  },
-  {
    "id": "od-studu-k-napojeni-den-v-praze",
    "title": "Od studu k napojení",
    "sub": "den v Praze",
@@ -589,6 +573,22 @@
     4,
     19,
     5
+   ]
+  },
+  {
+   "id": "uvod-do-nenasilne-komunikace-vikend-v-olomouci-3",
+   "title": "Úvod do nenásilné komunikace",
+   "sub": "víkend v Olomouci",
+   "date": "2027-05-08",
+   "time": "09:00",
+   "level": "Začátečník",
+   "format": "Víkend",
+   "desc": "Dopřejte si intenzivní víkendový vstup do světa nenásilné komunikace a vybudujte si pevné základy, které můžete dále rozvíjet.",
+   "url": "https://nenasilnakomunikace.org/kurz/uvod-do-nenasilne-komunikace-vikend-v-olomouci-3/",
+   "skills": [
+    3,
+    6,
+    12
    ]
   },
   {
