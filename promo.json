@@ -307,20 +307,6 @@
    "skills": []
   },
   {
-   "id": "eskalace-konfliktu-den-a-pul-v-brne",
-   "title": "Eskalace konfliktu",
-   "sub": "den a půl v Brně",
-   "date": "2027-03-06",
-   "time": "10:00",
-   "level": "Zkušený",
-   "format": "Víkend",
-   "desc": "Naučte se konflikty otevírat, vstupovat do nich a bezpečně je eskalovat.",
-   "url": "https://nenasilnakomunikace.org/kurz/eskalace-konfliktu-den-a-pul-v-brne/",
-   "skills": [
-    28
-   ]
-  },
-  {
    "id": "vztek-a-nenasilna-komunikace-od-sebeporozumeni-k-bezpecnemu-vyjadreni-den-v-praze",
    "title": "Vztek a nenásilná komunikace: od sebeporozumění k bezpečnému vyjádření",
    "sub": "den v Praze",
@@ -543,22 +529,6 @@
    ]
   },
   {
-   "id": "uvod-do-nenasilne-komunikace-vikend-v-olomouci-3",
-   "title": "Úvod do nenásilné komunikace",
-   "sub": "víkend v Olomouci",
-   "date": "2027-05-08",
-   "time": "09:00",
-   "level": "Začátečník",
-   "format": "Víkend",
-   "desc": "Dopřejte si intenzivní víkendový vstup do světa nenásilné komunikace a vybudujte si pevné základy, které můžete dále rozvíjet.",
-   "url": "https://nenasilnakomunikace.org/kurz/uvod-do-nenasilne-komunikace-vikend-v-olomouci-3/",
-   "skills": [
-    3,
-    6,
-    12
-   ]
-  },
-  {
    "id": "od-studu-k-napojeni-den-v-praze",
    "title": "Od studu k napojení",
    "sub": "den v Praze",
@@ -572,6 +542,22 @@
     4,
     19,
     5
+   ]
+  },
+  {
+   "id": "uvod-do-nenasilne-komunikace-vikend-v-olomouci-3",
+   "title": "Úvod do nenásilné komunikace",
+   "sub": "víkend v Olomouci",
+   "date": "2027-05-08",
+   "time": "09:00",
+   "level": "Začátečník",
+   "format": "Víkend",
+   "desc": "Dopřejte si intenzivní víkendový vstup do světa nenásilné komunikace a vybudujte si pevné základy, které můžete dále rozvíjet.",
+   "url": "https://nenasilnakomunikace.org/kurz/uvod-do-nenasilne-komunikace-vikend-v-olomouci-3/",
+   "skills": [
+    3,
+    6,
+    12
    ]
   },
   {
