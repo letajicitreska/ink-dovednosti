@@ -1,23 +1,6 @@
 {
  "courses": [
   {
-   "id": "jak-pracovat-s-polarizaci-spolecnosti",
-   "title": "Jak pracovat s polarizací společnosti",
-   "sub": "den v Brně",
-   "date": "2026-11-19",
-   "time": "09:30",
-   "level": "Začátečník",
-   "format": "Jednodenní",
-   "desc": "Naučme se pracovat s tématy, která stále více polarizují společnost.",
-   "url": "https://nenasilnakomunikace.org/kurz/jak-pracovat-s-polarizaci-spolecnosti/",
-   "skills": [
-    3,
-    6,
-    12,
-    20
-   ]
-  },
-  {
    "id": "kdyz-naslouchani-nestaci-uvod-do-krizove-intervence-den-v-brne-4",
    "title": "Když naslouchání nestačí – úvod do krizové intervence",
    "sub": "den v Brně",
@@ -50,8 +33,8 @@
   },
   {
    "id": "zvladani-reaktivity-od-automatickych-reakci-k-vedomym-odpovedim-den-v-praze",
-   "title": "Zvládání reaktivity: od automatických reakcí k vědomým odpovědím",
-   "sub": "den v Praze",
+   "title": "Zvládání reaktivity: od automatických reakcí k vědomým odpovědím (den v Praze)",
+   "sub": "KAPACITA NAPLNĚNA",
    "date": "2026-11-23",
    "time": "09:00",
    "level": "Pokročilý",
@@ -307,6 +290,20 @@
    "skills": []
   },
   {
+   "id": "eskalace-konfliktu-den-a-pul-v-brne",
+   "title": "Eskalace konfliktu",
+   "sub": "den a půl v Brně",
+   "date": "2027-03-06",
+   "time": "10:00",
+   "level": "Zkušený",
+   "format": "Víkend",
+   "desc": "Naučte se konflikty otevírat, vstupovat do nich a bezpečně je eskalovat.",
+   "url": "https://nenasilnakomunikace.org/kurz/eskalace-konfliktu-den-a-pul-v-brne/",
+   "skills": [
+    28
+   ]
+  },
+  {
    "id": "vztek-a-nenasilna-komunikace-od-sebeporozumeni-k-bezpecnemu-vyjadreni-den-v-praze",
    "title": "Vztek a nenásilná komunikace: od sebeporozumění k bezpečnému vyjádření",
    "sub": "den v Praze",
@@ -423,18 +420,6 @@
    ]
   },
   {
-   "id": "3738",
-   "title": "Introduction to Nonviolent Communication",
-   "sub": "weekend in Prague",
-   "date": "2027-04-17",
-   "time": "09:00",
-   "level": "Začátečník",
-   "format": "Víkend",
-   "desc": "The opportunity to explore the foundations of Nonviolent Communication (NVC), both theoretically and practically – an approach that is becoming…",
-   "url": "https://nenasilnakomunikace.org/kurz/3738/",
-   "skills": []
-  },
-  {
    "id": "uvod-do-nenasilne-komunikace-vikend-v-praze-27",
    "title": "Úvod do nenásilné komunikace",
    "sub": "víkend v Praze",
@@ -449,6 +434,18 @@
     6,
     12
    ]
+  },
+  {
+   "id": "3738",
+   "title": "Introduction to Nonviolent Communication",
+   "sub": "weekend in Prague",
+   "date": "2027-04-17",
+   "time": "09:00",
+   "level": "Začátečník",
+   "format": "Víkend",
+   "desc": "The opportunity to explore the foundations of Nonviolent Communication (NVC), both theoretically and practically – an approach that is becoming…",
+   "url": "https://nenasilnakomunikace.org/kurz/3738/",
+   "skills": []
   },
   {
    "id": "jak-pracovat-s-pretizenim-a-znovu-najit-energii-den-v-praze",
@@ -529,22 +526,6 @@
    ]
   },
   {
-   "id": "od-studu-k-napojeni-den-v-praze",
-   "title": "Od studu k napojení",
-   "sub": "den v Praze",
-   "date": "2027-05-08",
-   "time": "09:00",
-   "level": "Pokročilý",
-   "format": "Jednodenní",
-   "desc": "Stud není oblíbená emoce.",
-   "url": "https://nenasilnakomunikace.org/kurz/od-studu-k-napojeni-den-v-praze/",
-   "skills": [
-    4,
-    19,
-    5
-   ]
-  },
-  {
    "id": "uvod-do-nenasilne-komunikace-vikend-v-olomouci-3",
    "title": "Úvod do nenásilné komunikace",
    "sub": "víkend v Olomouci",
@@ -558,6 +539,22 @@
     3,
     6,
     12
+   ]
+  },
+  {
+   "id": "od-studu-k-napojeni-den-v-praze",
+   "title": "Od studu k napojení",
+   "sub": "den v Praze",
+   "date": "2027-05-08",
+   "time": "09:00",
+   "level": "Pokročilý",
+   "format": "Jednodenní",
+   "desc": "Stud není oblíbená emoce.",
+   "url": "https://nenasilnakomunikace.org/kurz/od-studu-k-napojeni-den-v-praze/",
+   "skills": [
+    4,
+    19,
+    5
    ]
   },
   {
@@ -707,6 +704,14 @@
  ],
  "podcast": [
   {
+   "id": "ep-109",
+   "num": "109",
+   "title": "Weaponizing therapy speech: když terapeutický jazyk rozděluje",
+   "date": "2026-11-19",
+   "minutes": "56",
+   "url": "https://podcasters.spotify.com/pod/show/petr-holk0/episodes/109-Weaponizing-therapy-speech-kdy-terapeutick-jazyk-rozdluje-e3sm12p"
+  },
+  {
    "id": "ep-108",
    "num": "108",
    "title": "Saša Dobrovolná: Respekt ve škole není luxus, ale laťka, kterou má přeskočit každá škola",
@@ -721,14 +726,6 @@
    "date": "2026-10-15",
    "minutes": "31",
    "url": "https://podcasters.spotify.com/pod/show/petr-holk0/episodes/107-Ian-Peatey-Anger-That-Serves-Life-e3qf1vf"
-  },
-  {
-   "id": "ep-106",
-   "num": "106",
-   "title": "4D of Disconnection: co spolehlivě brání spojení",
-   "date": "2026-10-01",
-   "minutes": "64",
-   "url": "https://podcasters.spotify.com/pod/show/petr-holk0/episodes/106-4D-of-Disconnection-co-spolehliv-brn-spojen-e3pn4so"
   }
  ]
 }
