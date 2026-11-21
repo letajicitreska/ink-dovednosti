@@ -420,6 +420,18 @@
    ]
   },
   {
+   "id": "3738",
+   "title": "Introduction to Nonviolent Communication",
+   "sub": "weekend in Prague",
+   "date": "2027-04-17",
+   "time": "09:00",
+   "level": "Začátečník",
+   "format": "Víkend",
+   "desc": "The opportunity to explore the foundations of Nonviolent Communication (NVC), both theoretically and practically – an approach that is becoming…",
+   "url": "https://nenasilnakomunikace.org/kurz/3738/",
+   "skills": []
+  },
+  {
    "id": "uvod-do-nenasilne-komunikace-vikend-v-praze-27",
    "title": "Úvod do nenásilné komunikace",
    "sub": "víkend v Praze",
@@ -434,18 +446,6 @@
     6,
     12
    ]
-  },
-  {
-   "id": "3738",
-   "title": "Introduction to Nonviolent Communication",
-   "sub": "weekend in Prague",
-   "date": "2027-04-17",
-   "time": "09:00",
-   "level": "Začátečník",
-   "format": "Víkend",
-   "desc": "The opportunity to explore the foundations of Nonviolent Communication (NVC), both theoretically and practically – an approach that is becoming…",
-   "url": "https://nenasilnakomunikace.org/kurz/3738/",
-   "skills": []
   },
   {
    "id": "jak-pracovat-s-pretizenim-a-znovu-najit-energii-den-v-praze",
@@ -526,22 +526,6 @@
    ]
   },
   {
-   "id": "uvod-do-nenasilne-komunikace-vikend-v-olomouci-3",
-   "title": "Úvod do nenásilné komunikace",
-   "sub": "víkend v Olomouci",
-   "date": "2027-05-08",
-   "time": "09:00",
-   "level": "Začátečník",
-   "format": "Víkend",
-   "desc": "Dopřejte si intenzivní víkendový vstup do světa nenásilné komunikace a vybudujte si pevné základy, které můžete dále rozvíjet.",
-   "url": "https://nenasilnakomunikace.org/kurz/uvod-do-nenasilne-komunikace-vikend-v-olomouci-3/",
-   "skills": [
-    3,
-    6,
-    12
-   ]
-  },
-  {
    "id": "od-studu-k-napojeni-den-v-praze",
    "title": "Od studu k napojení",
    "sub": "den v Praze",
@@ -555,6 +539,22 @@
     4,
     19,
     5
+   ]
+  },
+  {
+   "id": "uvod-do-nenasilne-komunikace-vikend-v-olomouci-3",
+   "title": "Úvod do nenásilné komunikace",
+   "sub": "víkend v Olomouci",
+   "date": "2027-05-08",
+   "time": "09:00",
+   "level": "Začátečník",
+   "format": "Víkend",
+   "desc": "Dopřejte si intenzivní víkendový vstup do světa nenásilné komunikace a vybudujte si pevné základy, které můžete dále rozvíjet.",
+   "url": "https://nenasilnakomunikace.org/kurz/uvod-do-nenasilne-komunikace-vikend-v-olomouci-3/",
+   "skills": [
+    3,
+    6,
+    12
    ]
   },
   {
@@ -602,20 +602,6 @@
     3,
     6,
     12
-   ]
-  },
-  {
-   "id": "jak-vest-konflikty-o-klimatu-vikend-v-brne",
-   "title": "Jak vést konflikty o klimatu",
-   "sub": "víkend v Brně",
-   "date": "2027-05-22",
-   "time": "10:00",
-   "level": "Začátečník",
-   "format": "Víkend",
-   "desc": "Fakta o klimatu potkávají nenásilnou komunikaci: víkend pro ty, kdo chtějí s lidmi kolem sebe najít v tématech klimatu a přírody společnou cestu.",
-   "url": "https://nenasilnakomunikace.org/kurz/jak-vest-konflikty-o-klimatu-vikend-v-brne/",
-   "skills": [
-    17
    ]
   },
   {
