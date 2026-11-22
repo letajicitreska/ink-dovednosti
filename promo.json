@@ -1,37 +1,6 @@
 {
  "courses": [
   {
-   "id": "kdyz-naslouchani-nestaci-uvod-do-krizove-intervence-den-v-brne-4",
-   "title": "Když naslouchání nestačí – úvod do krizové intervence",
-   "sub": "den v Brně",
-   "date": "2026-11-21",
-   "time": "09:00",
-   "level": "Pokročilý",
-   "format": "Jednodenní",
-   "desc": "Na kurzu, který propojuje principy nenásilné komunikace s praktickými technikami krizové intervence si osvojíte její základy, práci s intenzivními…",
-   "url": "https://nenasilnakomunikace.org/kurz/kdyz-naslouchani-nestaci-uvod-do-krizove-intervence-den-v-brne-4/",
-   "skills": [
-    10,
-    15
-   ]
-  },
-  {
-   "id": "uvod-do-nenasilne-komunikace-vikend-v-praze-24",
-   "title": "Úvod do nenásilné komunikace",
-   "sub": "víkend v Praze",
-   "date": "2026-11-21",
-   "time": "09:00",
-   "level": "Začátečník",
-   "format": "Víkend",
-   "desc": "Dopřejte si intenzivní víkendový vstup do světa nenásilné komunikace a vybudujte si pevné základy, které můžete dále rozvíjet.",
-   "url": "https://nenasilnakomunikace.org/kurz/uvod-do-nenasilne-komunikace-vikend-v-praze-24/",
-   "skills": [
-    3,
-    6,
-    12
-   ]
-  },
-  {
    "id": "zvladani-reaktivity-od-automatickych-reakci-k-vedomym-odpovedim-den-v-praze",
    "title": "Zvládání reaktivity: od automatických reakcí k vědomým odpovědím (den v Praze)",
    "sub": "KAPACITA NAPLNĚNA",
@@ -420,18 +389,6 @@
    ]
   },
   {
-   "id": "3738",
-   "title": "Introduction to Nonviolent Communication",
-   "sub": "weekend in Prague",
-   "date": "2027-04-17",
-   "time": "09:00",
-   "level": "Začátečník",
-   "format": "Víkend",
-   "desc": "The opportunity to explore the foundations of Nonviolent Communication (NVC), both theoretically and practically – an approach that is becoming…",
-   "url": "https://nenasilnakomunikace.org/kurz/3738/",
-   "skills": []
-  },
-  {
    "id": "uvod-do-nenasilne-komunikace-vikend-v-praze-27",
    "title": "Úvod do nenásilné komunikace",
    "sub": "víkend v Praze",
@@ -446,6 +403,18 @@
     6,
     12
    ]
+  },
+  {
+   "id": "3738",
+   "title": "Introduction to Nonviolent Communication",
+   "sub": "weekend in Prague",
+   "date": "2027-04-17",
+   "time": "09:00",
+   "level": "Začátečník",
+   "format": "Víkend",
+   "desc": "The opportunity to explore the foundations of Nonviolent Communication (NVC), both theoretically and practically – an approach that is becoming…",
+   "url": "https://nenasilnakomunikace.org/kurz/3738/",
+   "skills": []
   },
   {
    "id": "jak-pracovat-s-pretizenim-a-znovu-najit-energii-den-v-praze",
@@ -602,6 +571,20 @@
     3,
     6,
     12
+   ]
+  },
+  {
+   "id": "jak-vest-konflikty-o-klimatu-vikend-v-brne",
+   "title": "Jak vést konflikty o klimatu",
+   "sub": "víkend v Brně",
+   "date": "2027-05-22",
+   "time": "10:00",
+   "level": "Začátečník",
+   "format": "Víkend",
+   "desc": "Fakta o klimatu potkávají nenásilnou komunikaci: víkend pro ty, kdo chtějí s lidmi kolem sebe najít v tématech klimatu a přírody společnou cestu.",
+   "url": "https://nenasilnakomunikace.org/kurz/jak-vest-konflikty-o-klimatu-vikend-v-brne/",
+   "skills": [
+    17
    ]
   },
   {
